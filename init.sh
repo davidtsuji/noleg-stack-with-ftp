@@ -18,5 +18,6 @@ chmod 777 *.sh
 ./installSoftware.sh
 ./configureServer.sh
 ./setupBasicSite.sh $DOMAIN 3000
+./setupFtp.sh
 
 echo "All done. Try going to http://$DOMAIN/ now."
