@@ -12,5 +12,7 @@ echo "1. Set DefaultRoot ~"
 echo "2. Set RequireValidShell off"
 echo ""
 
+sleep 5
 sudo vi /etc/proftpd/proftpd.conf
+sleep 5
 sudo service proftpd restart
