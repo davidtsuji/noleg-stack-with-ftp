@@ -1,12 +1,10 @@
 #!/bin/bash
 
-DOMAIN=%DOMAIN%
-FTP_USER=%FTP_USER%
-FTP_USER_PASSWORD=%FTP_USER_PASSWORD%
-
+echo "Adding FTP user: $FTP_USER"
 sudo useradd $FTP_USER -g git -d /var/www/$DOMAIN/current/public -s /bin/false
 echo "$FTP_USER:$FTP_USER_PASSWORD" | chpasswd
 
+echo ""
 echo "Opening proftpd config"
 echo "----------------------"
 echo ""

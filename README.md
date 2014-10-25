@@ -16,7 +16,7 @@ Server Setup
 Ssh into your server and run the following command (replace example.com with your domain).
 
 ```bash
-DOMAIN=example.com bash <(curl -s https://raw.githubusercontent.com/davidtsuji/noleg-stack-with-ftp/master/init.sh)
+DOMAIN=example.com FTP_USER=max FTP_USER_PASSWORD=password bash <(curl -s https://raw.githubusercontent.com/davidtsuji/noleg-stack-with-ftp/master/init.sh)
 ```
 
 Setup SSH Keys
