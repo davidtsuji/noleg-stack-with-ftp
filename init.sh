@@ -10,7 +10,7 @@ set -e
 set -v
 
 sudo apt-get install -y git
-git clone https://github.com/garrows/noleg-stack.git
+git clone https://github.com/davidtsuji/noleg-stack-with-ftp.git
 
 cd noleg-stack
 chmod 777 *.sh
