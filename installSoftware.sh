@@ -19,5 +19,6 @@ sudo add-apt-repository -y ppa:chris-lea/node.js
 sudo apt-get update
 sudo apt-get install -y nodejs
 sudo apt-get install -y unzip
+sudo apt-get install -y proftpd
 
 sudo npm install -g forever express
