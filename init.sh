@@ -12,7 +12,7 @@ set -v
 sudo apt-get install -y git
 git clone https://github.com/davidtsuji/noleg-stack-with-ftp.git
 
-cd noleg-stack
+cd noleg-stack-with-ftp
 chmod 777 *.sh
 
 ./installSoftware.sh
