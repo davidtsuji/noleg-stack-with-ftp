@@ -7,7 +7,7 @@ SERVICE=%SERVICE%
 
 #Get latest commit
 REV=`git rev-parse HEAD`
-CHECKOUTDIR=$WEBDIR/$REV/
+CHECKOUTDIR=$WEBDIR/current/
 
 mkdir -p $CHECKOUTDIR
 echo "Checking out to $CHECKOUTDIR"
@@ -26,18 +26,15 @@ npm install
 
 echo "Done build"
 
-if [ -d $WEBDIR/current ]; then
-  OLD_DIR=`readlink $WEBDIR/current`
-fi
-
-echo "Linking $CHECKOUTDIR"
-ln -sfn $CHECKOUTDIR $WEBDIR/current
-
-if [ -d $OLD_DIR ]; then
-  echo "Removing old directory $OLD_DIR"
-  rm -rf $OLD_DIR
-fi
-
+# if [ -d $WEBDIR/current ]; then
+#   OLD_DIR=`readlink $WEBDIR/current`
+# fi
+# echo "Linking $CHECKOUTDIR"
+# ln -sfn $CHECKOUTDIR $WEBDIR/current
+# if [ -d $OLD_DIR ]; then
+#   echo "Removing old directory $OLD_DIR"
+#   rm -rf $OLD_DIR
+# fi
 
 is_upstart_service_running(){
     status $1 | grep -q "^$1 start" > /dev/null
